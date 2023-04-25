@@ -13,6 +13,7 @@ basic.forever(function () {
             . . # . .
             . . # . .
             `)
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 20)
     }
     if (ir_waarde == achteruit) {
         basic.showLeds(`
@@ -22,6 +23,7 @@ basic.forever(function () {
             . # # # .
             . . # . .
             `)
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 20)
     }
     if (ir_waarde == links) {
         basic.showLeds(`
@@ -31,6 +33,8 @@ basic.forever(function () {
             . # . . .
             . . # . .
             `)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 20)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 20)
     }
     if (ir_waarde == rechts) {
         basic.showLeds(`
@@ -40,6 +44,8 @@ basic.forever(function () {
             . . . # .
             . . # . .
             `)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 20)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 20)
     }
     if (ir_waarde == stop) {
         basic.showLeds(`
@@ -49,6 +55,7 @@ basic.forever(function () {
             . # # # .
             . . . . .
             `)
+        maqueen.motorStop(maqueen.Motors.All)
     }
 })
 basic.forever(function () {
