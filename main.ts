@@ -1,10 +1,10 @@
 let ir_waarde = 0
-let rechts = 4
-let links = 3
-let vooruit = 1
-let achteruit = 2
+let rechts = 79
+let links = 22
+let vooruit = 94
+let achteruit = 88
+let stop = 4
 basic.forever(function () {
-    let stop = 0
     if (ir_waarde == vooruit) {
         basic.showLeds(`
             . . # . .
