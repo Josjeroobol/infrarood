@@ -1,3 +1,4 @@
+let strip: neopixel.Strip = null
 let ir_waarde = 0
 let rechts = 79
 let links = 22
@@ -85,4 +86,8 @@ basic.forever(function () {
 })
 basic.forever(function () {
     ir_waarde = IR.IR_read()
+})
+basic.forever(function () {
+    strip = neopixel.create(DigitalPin.P15, 4, NeoPixelMode.RGB)
+    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
 })
